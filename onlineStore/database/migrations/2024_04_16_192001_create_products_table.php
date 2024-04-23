@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('size');
             $table->integer('stock');
             $table->foreignId('brand_id')->constrained();
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
     }

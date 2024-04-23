@@ -18,7 +18,7 @@ class Product extends Model
 
     //Relacion categoria
     public function categories(){
-        return $this->hasMnay(Category::class);
+        return $this->hasMany(Category::class);
     }
 
     //Relacion pedido
