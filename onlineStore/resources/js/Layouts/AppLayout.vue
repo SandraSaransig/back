@@ -53,6 +53,19 @@ const logout = () => {
                                 </NavLink>
                             </div>
 
+                           <!-- A cerca de y Contacto -->
+                           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('about')" :active="route().current('about')">
+                                    A cerca de
+                                </NavLink>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('about')" :active="route().current('about')">
+                                    Contacto
+                                </NavLink>
+                            </div>
+
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex" v-if="$page.props.user.permissions.includes('read categories')">
                                 <NavLink :href="route('categories.index')" :active="route().current('categories.*')">
                                     Categorias
@@ -321,7 +334,7 @@ const logout = () => {
 
             <!-- Page Content -->
             <main>
-                <slot />
+                <slot/>
             </main>
         </div>
     </div>

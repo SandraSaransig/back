@@ -9,14 +9,15 @@ use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
+    //Crear constante paginacion
+    const NUMBER_OF_ITEMS_PER_PAGE = 10;
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //constante paginacion
-        define('NUMBER_OF_ITEMS_PER_PAGE', 10);
-        $categories = Category::paginate(NUMBER_OF_ITEMS_PER_PAGE);
+
+        $categories = Category::paginate(self::NUMBER_OF_ITEMS_PER_PAGE);
         return inertia('Categories/Index', ['categories' => $categories]);
     }
 

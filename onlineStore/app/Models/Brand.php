@@ -10,7 +10,8 @@ class Brand extends Model
     use HasFactory;
 
        // definir una lista blanca de atributos que sí pueden ser asignados masivamente
-       protected $fillable = ['name', 'description'];
+      // protected $fillable = ['name', 'description'];
+      protected $guarded = [];
 
     //Metodo relacionar con productos
     public function products(){
