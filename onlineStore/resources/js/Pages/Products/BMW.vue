@@ -1,22 +1,14 @@
 <script>
 export default {
     name: 'ProductsBMW'
+
 }
 </script>
 
 <script setup>
-import AppLayout from '@/Pages/Welcome.vue'
+import AppLayout from '@/Layouts/AppLayout.vue'
 import { Link } from '@inertiajs/vue3'
 import { Inertia } from '@inertiajs/inertia'
-
-
-
- defineProps({
-     products:{
-        type: Object,
-        required: true
-    }
- })
 
 
 </script>

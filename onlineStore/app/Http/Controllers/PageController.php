@@ -12,4 +12,8 @@ class PageController extends Controller
     public function about(){
         return inertia::render('About');
     }
+
+    public function contact(){
+        return inertia::render('Contact');
+    }
 }

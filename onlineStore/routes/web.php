@@ -24,12 +24,14 @@ Route::middleware([
     Route::resource('/products', ProductController::class);
     Route::resource('/roles', RoleController::class);
 
-    //Rutas personalizadas para las pagians de productos BMW y Mercedes
-    Route::get('/products/bmw', [ProductController::class, 'bmw'])->name('products.bmw');
-    Route::get('/products/mercedes', [ProductController::class, 'mercedes'])->name('products.mercedes');
-
-    //Rutas para la pagina de  acerca de
-    Route::get('/about',[PageController::class, 'about'])->name('about');
 });
+//Rutas personalizadas para las pagians de productos BMW y Mercedes
+Route::get('/products/bmw', [ProductController::class, 'bmw'])->name('bmw');
+Route::get('/products/mercedes', [ProductController::class, 'mercedes'])->name('mercedes');
+
+//Rutas para la pagina de  acerca de
+Route::get('/about',[PageController::class, 'about'])->name('about');
+
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 

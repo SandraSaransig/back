@@ -25,6 +25,7 @@ const switchToTeam = (team) => {
 const logout = () => {
     router.post(route('logout'));
 };
+
 </script>
 
 <template>
@@ -49,22 +50,39 @@ const logout = () => {
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                            </div>
-
-                           <!-- A cerca de y Contacto -->
-                           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('about')" :active="route().current('about')">
-                                    A cerca de
+                                    Inicio
                                 </NavLink>
                             </div>
 
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('mercedes')" :active="route().current('mercedes')">
+                                    Mercedes
+                                </NavLink>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('bmw')" :active="route().current('bmw')">
+                                    BMW
+                                </NavLink>
+                            </div>
+
+                           <!-- Sobre nosotros y Contacto -->
+                           <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('about')" :active="route().current('about')">
+                                    Nosotros
+                                </NavLink>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('contact')" :active="route().current('contact')">
                                     Contacto
                                 </NavLink>
                             </div>
+                            <!-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('about')" :active="route().current('about')">
+                                    Contacto
+                                </NavLink>
+                            </div> -->
 
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex" v-if="$page.props.user.permissions.includes('read categories')">
                                 <NavLink :href="route('categories.index')" :active="route().current('categories.*')">
@@ -339,3 +357,4 @@ const logout = () => {
         </div>
     </div>
 </template>
+
