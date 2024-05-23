@@ -52,10 +52,10 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                 </div>
                 <div class="catalogo">
                     <div class="catalogo-bmw">
-                        <h1>BMW</h1>
+                        <h1><a :href="route('bmw')" :active="route().current('bmw')">BMW</a></h1>
                     </div>
                     <div class="catalogo-mercedes">
-                        <h1>Mercedes</h1>
+                        <h1><a :href="route('mercedes')" :active="route().current('mercedes')">Mercedes</a></h1>
                     </div>
                 </div>
             </div>
@@ -87,6 +87,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         </div>
                     </section>
                 </div>
+
             </div>
         </div>
     </div>
@@ -100,23 +101,22 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         <div class="footer-left">
                             <img src="logo.png" alt="empresa logo">
                             <ul>
-                                <li><a href="#">Nosotros</a></li>
-                                <li><a href="#">Protección de la marca</a></li>
+                                <li><a :href="route('about')" :active="route().current('about')">
+                                    Nosotros
+                                </a></li>
                                 <li><a href="#">Ética y cumplimiento</a></li>
-                                <li><a href="#">Personas y Carreras</a></li>
-                                <li><a href="#">Fondazione Bvlgari</a></li>
+                                <li><a href="#">Cambiar país/región España</a></li>
+
                             </ul>
                         </div>
 
                         <div class="footer-right">
                             <ul>
-                                <li><a href="#">Localizador de tiendas</a></li>
                                 <li><a href="#">Contáctenos</a></li>
-                                <li><a href="#">Solicitar una cita</a></li>
                                 <li><a href="#">Servicio de atención al cliente</a></li>
                                 <li><a href="#">Información sobre pedidos</a></li>
                                 <li><a href="#">Cambios y devoluciones</a></li>
-                                <li><a href="#">Cambiar país/región España</a></li>
+
 
                             </ul>
                             <div class="social-media">
@@ -342,9 +342,6 @@ footer {
     text-decoration: none;
 
 }
-
-
-
 
 
 .footer-right ul {

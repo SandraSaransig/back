@@ -44,41 +44,14 @@ function handleImageError() {
                                 fill="currentColor" />
                         </svg>
                     </div>
+
                     <nav v-if="canLogin" class="-mx-3 flex flex-1 justify-end">
                         <Link v-if="$page.props.auth.user" :href="route('dashboard')"
                             class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                         Dashboard
                         </Link>
 
-
-
-
-
-
-
                         <template v-else>
-                            <Link class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Inicio
-                            </Link>
-
-                            <Link :href="route('bmw')"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            BMW
-                            </Link>
-
-                            <Link :href="route('mercedes')" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Mercedes
-                            </Link>
-
-                            <Link :href="route('about')" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Sobre Nosotros
-                            </Link>
-
-                            <Link class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                            Contacto
-                            </Link>
-
-
                             <Link :href="route('login')"
                                 class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                             Log in
@@ -92,6 +65,33 @@ function handleImageError() {
 
                         </template>
                     </nav>
+                    <!-- Dentro del nav -->
+                        <!-- <Link :href="route('bmw')"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Inicio
+                        </Link>
+
+                        <Link :href="route('bmw')"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        BMW
+                        </Link>
+
+                        <Link :href="route('mercedes')"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Mercedes
+                        </Link>
+
+                        <Link :href="route('about')"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Sobre Nosotros
+                        </Link>
+
+                        <Link :href="route('contact')"
+                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Contacto
+                        </Link> -->
+
+
                 </header>
 
                 <main class="mt-6">
@@ -325,7 +325,8 @@ function handleImageError() {
                                                                 value="new-arrivals" type="checkbox"
                                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                                             <label for="filter-category-0"
-                                                                class="ml-3 text-sm text-gray-600">New Arrivals</label>
+                                                                class="ml-3 text-sm text-gray-600">New
+                                                                Arrivals</label>
                                                         </div>
                                                         <div class="flex items-center">
                                                             <input id="filter-category-1" name="category[]" value="sale"

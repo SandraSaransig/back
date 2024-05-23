@@ -9,7 +9,7 @@ use App\Http\Controllers\RoleController;
 
 //Rutas no autenticadas
 
-Route::get('/', [DashBoardController::class, 'index']);
+Route::get('/', [DashBoardController::class, 'index'])->name('index');
 
 Route::middleware([
     'auth:sanctum',
