@@ -27,24 +27,86 @@ import { Inertia } from '@inertiajs/inertia'
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="body mx-auto max-w-7xl px-6 lg:px-8">
                         <main>
-
-                            <section id="info-section">
-                                <div class="info-section">
-                                    <div class="info-box">
-                                        <h2>Donde estamos</h2>
-                                        <p>Calle: Manuel Matheu n57-76</p>
-                                        <p>Ciudad: 170138 Quito</p>
-                                        <p>País: Ecuador</p>
-                                    </div>
-                                    <div class="info-box">
-                                        <h2>Datos de contacto</h2>
-                                        <p>Teléfono: (593-2) 241 4356 </p>
-                                        <p>Teléfono: 099 116 5130</p>
-                                        <p>Email: <a href="mailto:prueba@correo.com">prueba@correo.com</a></p>
-                                    </div>
-                                    <div class="info-box">
-                                        <h2>Horario</h2>
-                                        <p>Lunes a Domingo: 07:00 - 21:00</p>
+                            <div class="fh-section-title clearfix text-center">
+                                <h1 class="titulo">Contacta Con Nosotros</h1>
+                            </div>
+                            <section class="container">
+                                <div class="row">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column_inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid contact-container">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="fh-contact-box contact-box">
+                                                                    <div class="info">
+                                                                        <h2>Donde estamos</h2>
+                                                                        <p>
+                                                                            <span class="info-title">Calle:</span>
+                                                                            <span class="info-details">Manuel Matheu
+                                                                                n57-76</span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="info-title">Ciudad:</span>
+                                                                            <span class="info-details">170138
+                                                                                Quito</span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="info-title">País:</span>
+                                                                            <span class="info-details">Ecuador</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="fh-contact-box contact-box">
+                                                                    <div class="info">
+                                                                        <h2>Datos de contacto</h2>
+                                                                        <p>
+                                                                            <span class="info-title">Teléfono:</span>
+                                                                            <span class="info-details">(593-2) 241
+                                                                                4356</span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="info-title">Teléfono:</span>
+                                                                            <span class="info-details">099 116
+                                                                                5130</span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span class="info-title">Email:</span>
+                                                                            <span class="info-details"><a
+                                                                                    href="mailto:prueba@correo.com">prueba@correo.com</a></span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="fh-contact-box contact-box">
+                                                                    <div class="info">
+                                                                        <h2>Horario</h2>
+                                                                        <p>
+                                                                            <span class="info-title">Lunes a
+                                                                                Domingo:</span>
+                                                                            <span class="info-details">07:00 -
+                                                                                21:00</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -112,42 +174,43 @@ import { Inertia } from '@inertiajs/inertia'
                         </main>
 
                         <!-- Footer -->
-            <footer class="py-16 text-sm text-black">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                        <div class="footer-container">
-                            <div class="footer-left">
-                                <img src="logo.png" alt="empresa logo">
-                                <ul>
-                                    <li><a :href="route('about')" :active="route().current('about')">
-                                            Nosotros
-                                        </a></li>
-                                    <li><a href="#">Ética y cumplimiento</a></li>
-                                    <li><a href="#">Cambiar país/región España</a></li>
+                        <footer class="py-16 text-sm text-black">
+                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                                    <div class="footer-container">
+                                        <div class="footer-left">
+                                            <img src="logo.png" alt="empresa logo">
+                                            <ul>
+                                                <li><a :href="route('about')" :active="route().current('about')">
+                                                        Nosotros
+                                                    </a></li>
+                                                <li><a href="#">Ética y cumplimiento</a></li>
+                                                <li><a href="#">Cambiar país/región España</a></li>
 
-                                </ul>
-                            </div>
+                                            </ul>
+                                        </div>
 
-                            <div class="footer-right">
-                                <ul>
-                                    <li><a :href="route('contact')" :active="route().current('contact')">Contáctenos</a></li>
-                                    <li><a href="#">Servicio de atención al cliente</a></li>
-                                    <li><a href="#">Información sobre pedidos</a></li>
-                                    <li><a href="#">Cambios y devoluciones</a></li>
+                                        <div class="footer-right">
+                                            <ul>
+                                                <li><a :href="route('contact')"
+                                                        :active="route().current('contact')">Contáctenos</a></li>
+                                                <li><a href="#">Servicio de atención al cliente</a></li>
+                                                <li><a href="#">Información sobre pedidos</a></li>
+                                                <li><a href="#">Cambios y devoluciones</a></li>
 
 
-                                </ul>
-                                <div class="social-media">
-                                    <img class="facebook" src="/images/fac.jpg" alt="facebook" />
-                                    <img class="insta" src="/images/insta.png" alt="instagram" />
+                                            </ul>
+                                            <div class="social-media">
+                                                <img class="facebook" src="/images/fac.jpg" alt="facebook" />
+                                                <img class="insta" src="/images/insta.png" alt="instagram" />
 
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-            </footer>
+                        </footer>
 
                     </div>
                 </div>
@@ -161,40 +224,99 @@ import { Inertia } from '@inertiajs/inertia'
 <style scoped>
 /*estilos pagina contacto */
 /* estilos horario y ubicacion */
-.info-section {
+
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.info-title {
+    font-weight: bold;
+}
+
+.info-details {
+    margin-left: 5px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan */
+    justify-content: space-between;
+}
+
+.contact-column {
+    flex: 1 1 calc(33.333% - 20px); /* Toma un tercio del ancho disponible menos el margen */
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .contact-column {
+        flex: 1 1 calc(50% - 20px); /* Toma la mitad del ancho disponible menos el margen */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-column {
+        flex: 1 1 100%; /* Toma el 100% del ancho disponible */
+        max-width: 100%;
+    }
+}
+
+
+/*
+.contact-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+
+.info-title {
+    font-weight: bold;
+}
+
+.info-details {
+    margin-left: 5px;
+}
+
+
+.contact-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
 }
 
-.info-box {
-    width: 30%;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
+.contact-column {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
 }
 
-.info-box h2 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
+@media (max-width: 768px) {
+    .contact-column {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
 }
 
-.info-box p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #666;
-}
+@media (max-width: 480px) {
+    .contact-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+} */
 
-.info-box a {
-    text-decoration: none;
-    color: #337ab7;
-}
 
-.info-box a:hover {
-    color: #23527c;
-}
 
 /* estilos formulario contacto */
 
@@ -262,9 +384,11 @@ import { Inertia } from '@inertiajs/inertia'
     .form-columns {
         flex-direction: column;
     }
+
     .form-column {
         margin-right: 0;
     }
+
     .form-column-right {
         margin-top: 20px;
     }
@@ -411,6 +535,4 @@ footer {
     transition: color 0.2s;
 
 }
-
-
 </style>
