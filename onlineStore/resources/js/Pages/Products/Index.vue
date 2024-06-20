@@ -398,7 +398,147 @@ const deleteProduct = id => {
                     </div>
                 </div>
             </div>
+
+
+            <!-- Footer -->
+        <footer class="py-16 text-sm text-black">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                    <div class="footer-container">
+                        <div class="footer-left">
+                            <img src="logo.png" alt="empresa logo">
+                            <ul>
+                                <li><a :href="route('about')" :active="route().current('about')">
+                                        Nosotros
+                                    </a></li>
+                                <li><a href="#">Ética y cumplimiento</a></li>
+                                <!-- <li><a href="#">Cambiar país/región España</a></li> -->
+                                <li>
+                                    <a>Cambiar país/región España</a>
+                                    <br>
+                                    <select name="languages" id="languages">
+                                        <option value="es">Español</option>
+                                        <option value="en">Ingles</option>
+                                    </select>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="footer-right">
+                            <ul>
+                                <li><a :href="route('contact')" :active="route().current('contact')">Contáctenos</a>
+                                </li>
+                                <li><a href="#">Servicio de atención al cliente</a></li>
+                                <li><a href="#">Información sobre pedidos</a></li>
+                                <li><a href="#">Cambios y devoluciones</a></li>
+
+
+                            </ul>
+                            <div class="social-media">
+                                <img class="facebook" src="/images/fac.jpg" alt="facebook" />
+                                <img class="insta" src="/images/insta.png" alt="instagram" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
         </div>
 
     </AppLayout>
 </template>
+
+
+<style scoped>
+
+
+/* estilos footer */
+footer {
+    color: #000000;
+    padding: 2rem 0;
+
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.footer-left,
+.footer-right {
+    flex: 1;
+
+}
+
+
+.footer-left img {
+    width: 150px;
+    margin-bottom: 1rem;
+
+}
+
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer-left li {
+    margin-bottom: 0.5rem;
+
+}
+
+
+.footer-left a,
+.footer-right a {
+
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer-right li {
+    margin-bottom: 0.5rem;
+
+}
+
+
+.social-media {
+    display: flex;
+    margin-top: 1rem;
+    height: 30px;
+
+}
+
+
+.social-media a {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+
+}
+</style>
+

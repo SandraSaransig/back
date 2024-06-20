@@ -126,7 +126,15 @@ import { Head } from '@inertiajs/vue3'
                                             Nosotros
                                         </a></li>
                                     <li><a href="#">Ética y cumplimiento</a></li>
-                                    <li><a href="#">Cambiar país/región España</a></li>
+                                    <!-- <li><a href="#">Cambiar país/región España</a></li> -->
+                                    <li>
+                                    <a>Cambiar país/región España</a>
+                                    <br>
+                                    <select name="languages" id="languages">
+                                        <option value="es">Español</option>
+                                        <option value="en">Ingles</option>
+                                    </select>
+                                </li>
 
                                 </ul>
                             </div>

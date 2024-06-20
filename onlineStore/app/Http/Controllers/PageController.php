@@ -16,4 +16,8 @@ class PageController extends Controller
     public function contact(){
         return inertia::render('Contact');
     }
+
+    public function basket(){
+        return inertia::render(('Basket'));
+    }
 }

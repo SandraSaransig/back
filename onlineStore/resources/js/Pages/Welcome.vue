@@ -30,8 +30,8 @@ function handleImageError() {
 
     <Head title="Welcome" />
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <img id="background" class="absolute -left-20 top-0 max-w-[877px]"
-            src="https://laravel.com/assets/img/welcome/background.svg" />
+        <!-- <img id="background" class="absolute -left-20 top-0 max-w-[877px]"
+            src="https://laravel.com/assets/img/welcome/background.svg" /> -->
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
@@ -51,7 +51,9 @@ function handleImageError() {
                         Dashboard
                         </Link>
 
+
                         <template v-else>
+
                             <Link :href="route('login')"
                                 class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                             Log in
@@ -96,7 +98,7 @@ function handleImageError() {
 
                 <main class="mt-6">
                     <div>
-                        {{ $page.props }}
+                        <!-- {{ $page.props }} -->
 
 
                     </div>
@@ -142,265 +144,99 @@ function handleImageError() {
                                             </button>
                                         </div>
 
-                                        <!-- Filters -->
-                                        <form class="mt-4 border-t border-gray-200">
-                                            <div class="border-t border-gray-200 px-4 py-6">
-                                                <h3 class="-mx-2 -my-3 flow-root">
-                                                    <!-- Expand/collapse section button -->
-                                                    <button type="button"
-                                                        class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500"
-                                                        aria-controls="filter-section-mobile-1" aria-expanded="false">
-                                                        <span class="font-medium text-gray-900">Categoria</span>
-                                                        <span class="ml-6 flex items-center">
-                                                            <!-- Expand icon, show/hide based on section open state. -->
-                                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
-                                                                aria-hidden="true">
-                                                                <path
-                                                                    d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                                                            </svg>
-                                                            <!-- Collapse icon, show/hide based on section open state. -->
-                                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
-                                                                aria-hidden="true">
-                                                                <path fill-rule="evenodd"
-                                                                    d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
-                                                                    clip-rule="evenodd" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                                </h3>
-                                                <!-- Filter section, show/hide based on section state. -->
-                                                <div class="pt-6" id="filter-section-mobile-1">
-                                                    <div class="space-y-6">
-                                                        <div class="flex items-center">
-                                                            <input id="filter-mobile-category-0" name="category[]"
-                                                                value="new-arrivals" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-mobile-category-0"
-                                                                class="ml-3 min-w-0 flex-1 text-gray-500">New
-                                                                Arrivals</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-mobile-category-1" name="category[]"
-                                                                value="sale" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-mobile-category-1"
-                                                                class="ml-3 min-w-0 flex-1 text-gray-500">Sale</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-mobile-category-2" name="category[]"
-                                                                value="travel" type="checkbox" checked
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-mobile-category-2"
-                                                                class="ml-3 min-w-0 flex-1 text-gray-500">Travel</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-mobile-category-3" name="category[]"
-                                                                value="organization" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-mobile-category-3"
-                                                                class="ml-3 min-w-0 flex-1 text-gray-500">Organization</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-mobile-category-4" name="category[]"
-                                                                value="accessories" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-mobile-category-4"
-                                                                class="ml-3 min-w-0 flex-1 text-gray-500">Accessories</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+
                                     </div>
                                 </div>
                             </div>
 
                             <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                                <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                                    <h1 class="text-4xl font-bold tracking-tight text-gray-900">BMW</h1>
+                                <div class="encabezado-img inset-0 -z-10 h-full w-full object-cover object-right md:object-center ">
 
-                                    <div class="flex items-center">
-                                        <div class="relative inline-block text-left">
-                                            <div>
-                                                <button type="button"
-                                                    class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
-                                                    id="menu-button" aria-expanded="false" aria-haspopup="true">
-                                                    Sort
-                                                    <svg class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-
-                                            <!--
-              Dropdown menu, show/hide based on menu state.
-
-              Entering: "transition ease-out duration-100"
-                From: "transform opacity-0 scale-95"
-                To: "transform opacity-100 scale-100"
-              Leaving: "transition ease-in duration-75"
-                From: "transform opacity-100 scale-100"
-                To: "transform opacity-0 scale-95"
-            -->
-                                            <div class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                                role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
-                                                tabindex="-1">
-                                                <div class="py-1" role="none">
-                                                    <!--
-                  Active: "bg-gray-100", Not Active: ""
-
-                  Selected: "font-medium text-gray-900", Not Selected: "text-gray-500"
-                -->
-                                                    <a href="#" class="text-gray-500 block px-4 py-2 text-sm"
-                                                        role="menuitem" tabindex="-1" id="menu-item-3">Price: Low to
-                                                        High</a>
-                                                    <a href="#" class="text-gray-500 block px-4 py-2 text-sm"
-                                                        role="menuitem" tabindex="-1" id="menu-item-4">Price: High to
-                                                        Low</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <button type="button"
-                                            class="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
-                                            <span class="sr-only">View grid</span>
-                                            <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 20 20"
-                                                fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M4.25 2A2.25 2.25 0 002 4.25v2.5A2.25 2.25 0 004.25 9h2.5A2.25 2.25 0 009 6.75v-2.5A2.25 2.25 0 006.75 2h-2.5zm0 9A2.25 2.25 0 002 13.25v2.5A2.25 2.25 0 004.25 18h2.5A2.25 2.25 0 009 15.75v-2.5A2.25 2.25 0 006.75 11h-2.5zm9-9A2.25 2.25 0 0011 4.25v2.5A2.25 2.25 0 0013.25 9h2.5A2.25 2.25 0 0018 6.75v-2.5A2.25 2.25 0 0015.75 2h-2.5zm0 9A2.25 2.25 0 0011 13.25v2.5A2.25 2.25 0 0013.25 18h2.5A2.25 2.25 0 0018 15.75v-2.5A2.25 2.25 0 0015.75 11h-2.5z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-                                        <button type="button"
-                                            class="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden">
-                                            <span class="sr-only">Filters</span>
-                                            <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 20 20"
-                                                fill="currentColor">
-                                                <path fill-rule="evenodd"
-                                                    d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 01.628.74v2.288a2.25 2.25 0 01-.659 1.59l-4.682 4.683a2.25 2.25 0 00-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 018 18.25v-5.757a2.25 2.25 0 00-.659-1.591L2.659 6.22A2.25 2.25 0 012 4.629V2.34a.75.75 0 01.628-.74z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
+                                    <h1>Repuestos Coche BMW y Mercedes</h1>
+                                    <h4>Encuentra los repuestos de las marcas de lujo mas exclusivas en NombreEmpresa. ¡LLegamos lejos
+                                        para satisfacer tus necesidades!</h4>
                                     </div>
-                                </div>
+
+
 
                                 <section aria-labelledby="products-heading" class="pb-24 pt-6">
-                                    <h2 id="products-heading" class="sr-only">Products</h2>
+                                     <!-- Presentacion empresa -->
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="acerca-de mx-auto max-w-7xl px-6 lg:px-8">
+                    <h1 class="text-4xl tracking-tight sm:text-6xl">Acerca de</h1>
+                    <h3>Nombre Empresa</h3>
+                    <div class="descripcion acerda-de">
+                        <img src="/images/em.jpeg" alt="foto-empresa">
 
-                                    <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-                                        <!-- Filters -->
-                                        <form class="hidden lg:block">
-                                            <div class="border-b border-gray-200 py-6">
-                                                <h3 class="-my-3 flow-root">
-                                                    <!-- Expand/collapse section button -->
-                                                    <button type="button"
-                                                        class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500"
-                                                        aria-controls="filter-section-1" aria-expanded="false">
-                                                        <span class="font-medium text-gray-900">Category</span>
-                                                        <span class="ml-6 flex items-center">
-                                                            <!-- Expand icon, show/hide based on section open state. -->
-                                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
-                                                                aria-hidden="true">
-                                                                <path
-                                                                    d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                                                            </svg>
-                                                            <!-- Collapse icon, show/hide based on section open state. -->
-                                                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
-                                                                aria-hidden="true">
-                                                                <path fill-rule="evenodd"
-                                                                    d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
-                                                                    clip-rule="evenodd" />
-                                                            </svg>
-                                                        </span>
-                                                    </button>
-                                                </h3>
-                                                <!-- Filter section, show/hide based on section state. -->
-                                                <div class="pt-6" id="filter-section-1">
-                                                    <div class="space-y-4">
-                                                        <div class="flex items-center">
-                                                            <input id="filter-category-0" name="category[]"
-                                                                value="new-arrivals" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-category-0"
-                                                                class="ml-3 text-sm text-gray-600">New
-                                                                Arrivals</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-category-1" name="category[]" value="sale"
-                                                                type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-category-1"
-                                                                class="ml-3 text-sm text-gray-600">Sale</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-category-2" name="category[]"
-                                                                value="travel" type="checkbox" checked
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-category-2"
-                                                                class="ml-3 text-sm text-gray-600">Travel</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-category-3" name="category[]"
-                                                                value="organization" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-category-3"
-                                                                class="ml-3 text-sm text-gray-600">Organization</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input id="filter-category-4" name="category[]"
-                                                                value="accessories" type="checkbox"
-                                                                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                            <label for="filter-category-4"
-                                                                class="ml-3 text-sm text-gray-600">Accessories</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                        <p class="mt-6 text-lg leading-8 text-black-300">
+                            Es una empresa de respuestos de coche de marcas de lujo que tiene como objetivo llegar a un
+                            público más amplio.
+                            Nos especializamos en ofrecer una amplia gama de repuestos y accesoreios para coches de
+                            marcas recocnocidas en el mercado de lujo.
+                            Nuestro equipo está siempre dispuesto a brindar asesoramiento y asistencia personalizada a
+                            nuestros clientes.
+                            Nos enorgullece ofrecer un servicio excepcional y garantixzar la satisfaccion total de
+                            nuestros clientes.
+                            Si buscas repuestos de calidad para tu coche de lujo, no dudes en contactarnos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                        <!-- Product grid -->
-                                        <div class="lg:col-span-3">
-                                            <!-- Your content -->
-                                            <!-- Prueba vista producto -->
-                                            <div class="bg-white">
-                                                <div
-                                                    class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                                                    <div
-                                                        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                                                        <div class="group relative">
-                                                            <div
-                                                                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                                                                <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
-                                                                    alt="Front of men&#039;s Basic Tee in black."
-                                                                    class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                                                            </div>
-                                                            <div class="mt-4 flex justify-between">
-                                                                <div>
-                                                                    <h3 class="text-sm text-gray-700">
-                                                                        <a href="#">
-                                                                            <span aria-hidden="true"
-                                                                                class="absolute inset-0"></span>
-                                                                            Basic Tee ppp
-                                                                        </a>
-                                                                    </h3>
-                                                                    <p class="mt-1 text-sm text-gray-500">Black</p>
-                                                                </div>
-                                                                <p class="text-sm font-medium text-gray-900">$35</p>
-                                                            </div>
-                                                        </div>
+    <!-- Ir al Catalgo -->
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="titulo-catalogo ">
+                    <h1>Catalogo</h1>
+                </div>
+                <div class="catalogo">
+                    <div class="catalogo-bmw">
+                        <h1><a :href="route('bmw')" :active="route().current('bmw')">BMW</a></h1>
+                    </div>
+                    <div class="catalogo-mercedes">
+                        <h1><a :href="route('mercedes')" :active="route().current('mercedes')">Mercedes</a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                                        <!-- More products... -->
-                                                    </div>
-                                                </div>
-                                            </div>
+    <!-- Servicios -->
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="servicios-contenedor p-6 bg-white border-b border-gray-200">
+                    <section class="servicios ">
+                        <h2>Servicios</h2>
+                        <p>Descubre nuestros servicios</p>
+                        <div class="servicios-columnas">
+                            <div class="servicio">
+                                <h3>Venta de repuestos de coches de marcas de lujo</h3>
+                                <p>Entendemos lo importante que es recibir los repuestos lo más rápido posible. Por eso,
+                                    ofrecemos un servicio de envío rápido y seguro para que puedas...</p>
+                            </div>
+                            <div class="servicio">
+                                <h3>Envío rápido y seguro</h3>
+                                <p>En Saransig, no solo vendemos repuestos de coches de marcas de lujo...</p>
+                            </div>
+                            <div class="servicio">
+                                <h3>Asesoramiento experto</h3>
+                                <p>Descripción del servicio adicional...</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
+            </div>
+        </div>
+    </div>
+    <hr>
 
-
-                                        </div>
-                                    </div>
                                 </section>
                             </main>
                         </div>
@@ -410,9 +246,295 @@ function handleImageError() {
                 </main>
 
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                    Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
+                    <!-- Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }}) -->
+                    <div class="footer-container">
+                        <div class="footer-left">
+                            <img src="logo.png" alt="empresa logo">
+                            <ul>
+                                <li><a :href="route('about')" :active="route().current('about')">
+                                    Nosotros
+                                </a></li>
+                                <li><a href="#">Ética y cumplimiento</a></li>
+                                <li>
+                                    <a >Cambiar país/región España</a>
+                                    <br>
+                                    <select name="languages" id="languages">
+                                        <option value="es">Español</option>
+                                        <option value="en">Ingles</option>
+                                    </select>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="footer-right">
+                            <ul>
+                                <li><a href="#">Contáctenos</a></li>
+                                <li><a href="#">Servicio de atención al cliente</a></li>
+                                <li><a href="#">Información sobre pedidos</a></li>
+                                <li><a href="#">Cambios y devoluciones</a></li>
+
+
+                            </ul>
+                            <div class="social-media">
+                                <img class="facebook" src="/images/fac.jpg" alt="facebook" />
+                                <img class="insta" src="/images/insta.png" alt="instagram" />
+
+                            </div>
+                        </div>
+                    </div>
                 </footer>
             </div>
         </div>
     </div>
 </template>
+
+
+
+
+
+
+<style scoped>
+/* encabezado estilos */
+.encabezado-img {
+    background-image: url('/images/mb.jpg');
+    height: 600px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+}
+
+.encabezado-img h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.encabezado-img p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* estilos presentacion de la empresa */
+.acerca-de {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.acerca-de h1 {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcion p {
+    text-align: justify;
+    padding: 20px;
+
+}
+
+.descripcion img {
+    margin: 10px;
+    height: 300px;
+
+}
+
+/* estilos catalgog */
+
+.titulo-catalogo h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.catalogo {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.catalogo-bmw {
+    background-image: url('/images/bmw.jpg');
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.catalogo-bmw h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.catalogo-mercedes {
+    background-image: url('/images/mercedes.jpeg');
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogo-mercedes h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* Estilo parte servicios */
+.servicios {
+    margin: 40px auto;
+    padding: 20px;
+
+}
+
+.servicios h2 {
+    font-size: 20px;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.servicios p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para las columnas */
+.servicios-columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicio {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicio:last-child {
+    margin-right: 0;
+}
+
+.servicio h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.servicio p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* estilos footer */
+footer {
+    color: #000000;
+    padding: 2rem 0;
+
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.footer-left,
+.footer-right {
+    flex: 1;
+
+}
+
+
+.footer-left img {
+    width: 150px;
+    margin-bottom: 1rem;
+
+}
+
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer-left li {
+    margin-bottom: 0.5rem;
+
+}
+
+
+.footer-left a,
+.footer-right a {
+
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer-right li {
+    margin-bottom: 0.5rem;
+
+}
+
+
+.social-media {
+    display: flex;
+    margin-top: 1rem;
+    height: 30px;
+
+}
+
+
+.social-media a {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+
+}
+
+
+
+</style>

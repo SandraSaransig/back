@@ -196,8 +196,15 @@ import { Inertia } from '@inertiajs/inertia'
                                                         :active="route().current('contact')">Contáctenos</a></li>
                                                 <li><a href="#">Servicio de atención al cliente</a></li>
                                                 <li><a href="#">Información sobre pedidos</a></li>
-                                                <li><a href="#">Cambios y devoluciones</a></li>
-
+                                                <!-- <li><a href="#">Cambios y devoluciones</a></li> -->
+                                                <li>
+                                                    <a>Cambiar país/región España</a>
+                                                    <br>
+                                                    <select name="languages" id="languages">
+                                                        <option value="es">Español</option>
+                                                        <option value="en">Ingles</option>
+                                                    </select>
+                                                </li>
 
                                             </ul>
                                             <div class="social-media">
@@ -225,7 +232,7 @@ import { Inertia } from '@inertiajs/inertia'
 /*estilos pagina contacto */
 /* estilos horario y ubicacion */
 
-.titulo{
+.titulo {
     font-size: 20px;
     font-weight: bold;
 }
@@ -247,26 +254,30 @@ import { Inertia } from '@inertiajs/inertia'
 
 .contact-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan */
     justify-content: space-between;
 }
 
 .contact-column {
-    flex: 1 1 calc(33.333% - 20px); /* Toma un tercio del ancho disponible menos el margen */
+    flex: 1 1 calc(33.333% - 20px);
+    /* Toma un tercio del ancho disponible menos el margen */
     max-width: calc(33.333% - 20px);
     box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
     .contact-column {
-        flex: 1 1 calc(50% - 20px); /* Toma la mitad del ancho disponible menos el margen */
+        flex: 1 1 calc(50% - 20px);
+        /* Toma la mitad del ancho disponible menos el margen */
         max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
     .contact-column {
-        flex: 1 1 100%; /* Toma el 100% del ancho disponible */
+        flex: 1 1 100%;
+        /* Toma el 100% del ancho disponible */
         max-width: 100%;
     }
 }

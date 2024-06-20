@@ -34,4 +34,7 @@ Route::get('/about',[PageController::class, 'about'])->name('about');
 
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
+//Ruta cesta compra
+Route::get('/cesta',[PageController::class, 'basket'])->name('basket');
+
 

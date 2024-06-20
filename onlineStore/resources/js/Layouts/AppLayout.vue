@@ -55,7 +55,7 @@ const logout = () => {
                                 </NavLink>
                             </div>
 
-                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <!-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('mercedes')" :active="route().current('mercedes')">
                                     Mercedes
                                 </NavLink>
@@ -65,7 +65,7 @@ const logout = () => {
                                 <NavLink :href="route('bmw')" :active="route().current('bmw')">
                                     BMW
                                 </NavLink>
-                            </div>
+                            </div> -->
 
                             <!-- Sobre nosotros y Contacto -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -103,6 +103,12 @@ const logout = () => {
                                 v-if="$page.props.user.permissions.includes('read roles')">
                                 <NavLink :href="route('roles.index')" :active="route().current('roles.*')">
                                     Roles
+                                </NavLink>
+                            </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('basket')" :active="route().current('basket')">
+                                    Cesta
                                 </NavLink>
                             </div>
 
